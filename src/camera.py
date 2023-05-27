@@ -15,6 +15,7 @@ class VideoCamera(object):
         self.pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
         self.prev_time = time.time()
         self.FRAME_RATE = 10  # フレームレートを定義
+        self.final_count = None  # 追加する行
 
     def __del__(self):
         self.video.release()
