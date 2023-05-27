@@ -50,7 +50,7 @@ class VideoCamera(object):
                 self.prev_time = time.time()
                 break
 
-        if success and image is not None:
+#         if success and image is not None:
 
             if image is not None:  # 画像が空でないことをチェック
     
@@ -92,6 +92,6 @@ class VideoCamera(object):
                 ret, jpeg = cv2.imencode('.jpg', image)
                 return jpeg.tobytes()
 
-        else:
-            print("Failed to capture frame from camera.")
-            return None
+#         else:
+#             print("Failed to capture frame from camera.")
+#             return None
