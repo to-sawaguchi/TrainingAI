@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(1)
+        self.video = cv2.VideoCapture(0)
         self.counter = 0 
         self.stage = None
         self.timer = None  
