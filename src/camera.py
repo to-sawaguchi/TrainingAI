@@ -49,6 +49,10 @@ class VideoCamera(object):
             if elapsed_time > 1./self.FRAME_RATE:
                 self.prev_time = time.time()
                 break
+                
+        if image is not None:  # 画像が空でないことをチェック
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+ 
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image.flags.writeable = False
         results = self.pose.process(image)
